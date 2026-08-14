@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Thank you for contacting Caro Living."
+  >
+
+  <title>Thank You | Caro Living</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --ink: #151513;
+      --cream: #ece5d8;
+      --paper: #f7f5f0;
+      --teal: #6ba7a2;
+      --teal-dark: #356e6a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .header {
+      height: 92px;
+      padding: 0 6vw;
+      background: var(--ink);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: var(--white);
+      font-family: "Italiana", serif;
+      font-size: 3rem;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--teal);
+    }
+
+    .header-link {
+      padding: 0.85rem 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background 0.25s,
+        color 0.25s;
+    }
+
+    .header-link:hover {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    main {
+      min-height: calc(100vh - 92px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .message {
+      padding: 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 1.25rem;
+      color: var(--teal-dark);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 750px;
+      margin: 0;
+      font-family: "Italiana", serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .description {
+      max-width: 570px;
+      margin: 2rem 0;
+      color: #5c5953;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .button {
+      align-self: flex-start;
+      display: inline-flex;
+      padding: 1rem 1.5rem;
+      border: 1px solid var(--teal);
+      background: var(--teal);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background 0.25s,
+        color 0.25s;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: var(--teal-dark);
+    }
+
+    .visual {
+      min-height: 650px;
+      padding: 4rem;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-card {
+      width: min(440px, 100%);
+      aspect-ratio: 1 / 1.12;
+      padding: 3rem;
+      background: var(--ink);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .check {
+      width: 72px;
+      height: 72px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      color: #b8d8d5;
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+    }
+
+    .visual-card blockquote {
+      margin: 0;
+      color: #ded5c8;
+      font-family: "Italiana", serif;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.2;
+    }
+
+    .visual-card p {
+      margin: 0;
+      color: #b8d8d5;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 800px) {
+      .header {
+        height: 78px;
+        padding: 0 1.3rem;
+      }
+
+      .logo {
+        font-size: 2.4rem;
+      }
+
+      .header-link {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.65rem;
+      }
+
+      main {
+        min-height: calc(100vh - 78px);
+        grid-template-columns: 1fr;
+      }
+
+      .message {
+        min-height: 560px;
+        padding: 5rem 1.4rem;
+      }
+
+      h1 {
+        font-size: clamp(3.7rem, 17vw, 6rem);
+      }
+
+      .visual {
+        min-height: auto;
+        padding: 1.4rem;
+      }
+
+      .visual-card {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Return to Caro Living"
+    >
+      caro<span>.</span>
+    </a>
+
+    <a
+      class="header-link"
+      href="index.html"
+    >
+      Return home
+    </a>
+  </header>
+
+  <main>
+    <section class="message">
+      <p class="eyebrow">
+        Inquiry received
+      </p>
+
+      <h1>Thank you.</h1>
+
+      <p class="description">
+        Your message has been sent successfully.
+        Carolina will review your inquiry and contact
+        you personally as soon as possible.
+      </p>
+
+      <a
+        class="button"
+        href="index.html#collection"
+      >
+        Continue exploring
+      </a>
+    </section>
+
+    <section class="visual">
+      <div class="visual-card">
+        <div class="check">✓</div>
+
+        <blockquote>
+          Beautiful rooms begin with one thoughtful
+          piece.
+        </blockquote>
+
+        <p>
+          Caro Living · Miami
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

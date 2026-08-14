@@ -159,15 +159,95 @@
           <span>Miami, Florida</span>
         </div>
       </div>
-      <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>Name<input type="text" name="name" placeholder="Your name" required></label>
-        <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
-        <label>Phone<input type="tel" name="phone" placeholder="(305) 000-0000"></label>
-        <label>What are you looking for?<select name="interest"><option>A specific piece</option><option>Personal sourcing</option><option>Room styling</option><option>Delivery information</option></select></label>
-        <label>Message<textarea name="message" rows="4" placeholder="Tell Carolina about your space..."></textarea></label>
-        <button class="btn btn-teal" type="submit">Send inquiry</button>
-        <p class="form-note">Replace YOUR_FORM_ID in index.html with your Formspree form ID.</p>
-      </form>
+      <form
+  class="contact-form reveal"
+  action="https://formspree.io/f/myegpvbq"
+  method="POST"
+>
+  <input
+    type="hidden"
+    name="_next"
+    value="https://franksabogal04.github.io/caropro/thankyou.html"
+  >
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Caro Living Furniture Inquiry"
+  >
+
+  <label>
+    Name
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your name"
+      required
+    >
+  </label>
+
+  <label>
+    Email
+
+    <input
+      type="email"
+      name="email"
+      placeholder="you@email.com"
+      required
+    >
+  </label>
+
+  <label>
+    Phone
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="(305) 000-0000"
+    >
+  </label>
+
+  <label>
+    What are you looking for?
+
+    <select name="interest">
+      <option value="A specific piece">
+        A specific piece
+      </option>
+
+      <option value="Personal sourcing">
+        Personal sourcing
+      </option>
+
+      <option value="Room styling">
+        Room styling
+      </option>
+
+      <option value="Delivery information">
+        Delivery information
+      </option>
+    </select>
+  </label>
+
+  <label>
+    Message
+
+    <textarea
+      name="message"
+      rows="4"
+      placeholder="Tell Carolina about your space..."
+      required
+    ></textarea>
+  </label>
+
+  <button
+    class="btn btn-teal"
+    type="submit"
+  >
+    Send inquiry
+  </button>
+</form>
     </section>
   </main>
 
