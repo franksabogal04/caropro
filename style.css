@@ -292,7 +292,7 @@
     background-image: url("https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1200&q=85");
   }
   .image-table {
-    background-image: url("https://images.unsplash.com/photo-1532372320572-cda25653a694?auto=format&fit=crop&w=1200&q=85");
+    background-image: url("https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=85");
   }
   .image-cabinet {
     background-image: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85");
@@ -331,20 +331,13 @@
   }
   .about-photo {
     min-height: 800px;
-    background: url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85")
-      center/cover;
+    background-image: url("assets/PHOTO-2026-08-14-08-14-46.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
   }
-  .photo-note {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    background: rgba(0, 0, 0, 0.72);
-    padding: 0.7rem 1rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+
   .about-copy {
     padding: 8rem 7vw;
   }
@@ -378,7 +371,7 @@
   }
   .service {
     display: grid;
-    grid-template-columns: 80px 1fr 40px;
+    grid-template-columns: 80px 1fr;
     gap: 1rem;
     align-items: center;
     padding: 2rem 0;
@@ -397,9 +390,7 @@
     color: #77736b;
     margin: 0.5rem 0 0;
   }
-  .service b {
-    font-size: 1.5rem;
-  }
+
   .testimonial {
     background: var(--teal-dark);
     color: white;
@@ -684,7 +675,7 @@
       font-size: 1.55rem;
     }
     .service {
-      grid-template-columns: 42px 1fr 20px;
+      grid-template-columns: 42px 1fr;
     }
     .service h3 {
       font-size: 1.6rem;

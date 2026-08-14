@@ -107,7 +107,6 @@
 
     <section class="about" id="about">
       <div class="about-photo reveal">
-        <div class="photo-note">Replace this image with Carolina's photo</div>
       </div>
       <div class="about-copy reveal">
         <p class="eyebrow light">The eye behind Caro</p>
@@ -125,10 +124,10 @@
         <p>From one perfect chair to a complete room, the experience is personal and refreshingly simple.</p>
       </div>
       <div class="service-list">
-        <article class="service reveal"><span>01</span><div><h3>Curated Furniture</h3><p>Shop distinctive pieces selected for comfort, quality, and timeless character.</p></div><b>↗</b></article>
-        <article class="service reveal"><span>02</span><div><h3>Personal Sourcing</h3><p>Tell Carolina what you need and she will help find the right piece for your space and budget.</p></div><b>↗</b></article>
-        <article class="service reveal"><span>03</span><div><h3>Room Styling</h3><p>Thoughtful placement and finishing touches that make your furniture feel at home.</p></div><b>↗</b></article>
-        <article class="service reveal"><span>04</span><div><h3>Delivery Coordination</h3><p>Clear communication from purchase through delivery, so the final step feels effortless.</p></div><b>↗</b></article>
+        <article class="service reveal"><span>01</span><div><h3>Curated Furniture</h3><p>Shop distinctive pieces selected for comfort, quality, and timeless character.</p></div></article>
+        <article class="service reveal"><span>02</span><div><h3>Personal Sourcing</h3><p>Tell Carolina what you need and she will help find the right piece for your space and budget.</p></div></article>
+        <article class="service reveal"><span>03</span><div><h3>Room Styling</h3><p>Thoughtful placement and finishing touches that make your furniture feel at home.</p></div></article>
+        <article class="service reveal"><span>04</span><div><h3>Delivery Coordination</h3><p>Clear communication from purchase through delivery, so the final step feels effortless.</p></div></article>
       </div>
     </section>
 
@@ -180,6 +179,127 @@
   </footer>
 
   <a class="back-top" href="#top" aria-label="Back to top">↑</a>
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      /* Collection filters */
+  
+      const filterButtons =
+        document.querySelectorAll(".filter");
+  
+      const productCards =
+        document.querySelectorAll(".product-card");
+  
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const selectedCategory =
+            button.getAttribute("data-filter");
+  
+          filterButtons.forEach(function (item) {
+            item.classList.remove("active");
+          });
+  
+          button.classList.add("active");
+  
+          productCards.forEach(function (card) {
+            const cardCategory =
+              card.getAttribute("data-category");
+  
+            if (
+              selectedCategory === "all" ||
+              selectedCategory === cardCategory
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+  
+  
+      /* Testimonials */
+  
+      const testimonials = [
+        {
+          quote:
+            "Carolina helped me choose pieces I would never have found on my own. My living room finally feels finished, but still completely like me.",
+          author: "— Sofia M., Miami"
+        },
+        {
+          quote:
+            "The process was personal, easy, and never pushy. The table Carolina found became the piece everyone talks about when they visit.",
+          author: "— Daniela R., Coral Gables"
+        },
+        {
+          quote:
+            "She understood the feeling I wanted before I knew how to describe it. Every piece works beautifully together and feels built for real life.",
+          author: "— Isabella P., Brickell"
+        }
+      ];
+  
+      let currentQuote = 0;
+  
+      const quoteText =
+        document.getElementById("quoteText");
+  
+      const quoteAuthor =
+        document.getElementById("quoteAuthor");
+  
+      const previousButton =
+        document.getElementById("quotePrev");
+  
+      const nextButton =
+        document.getElementById("quoteNext");
+  
+      function displayQuote() {
+        quoteText.textContent =
+          testimonials[currentQuote].quote;
+  
+        quoteAuthor.textContent =
+          testimonials[currentQuote].author;
+      }
+  
+      previousButton.addEventListener(
+        "click",
+        function () {
+          currentQuote--;
+  
+          if (currentQuote < 0) {
+            currentQuote =
+              testimonials.length - 1;
+          }
+  
+          displayQuote();
+        }
+      );
+  
+      nextButton.addEventListener(
+        "click",
+        function () {
+          currentQuote++;
+  
+          if (
+            currentQuote >=
+            testimonials.length
+          ) {
+            currentQuote = 0;
+          }
+  
+          displayQuote();
+        }
+      );
+  
+  
+      /* Footer year */
+  
+      const year =
+        document.getElementById("year");
+  
+      if (year) {
+        year.textContent =
+          new Date().getFullYear();
+      }
+    });
+  </script>
 </body>
 </html>
